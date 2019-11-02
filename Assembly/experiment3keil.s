@@ -1,0 +1,22 @@
+		INCLUDE MSP432xx_constants.s
+		INCLUDE MSP432xx_tim_constants.s
+		AREA main,CODE,READONLY	
+		EXPORT __main
+		ENTRY
+__main	PROC
+		MOV R0,#17
+		MOV R1,#23
+		CMP R0,R1
+		CMN R0,R1
+		TST R0,R1
+		TEQ R0,R1
+		AND R2,R0,R1
+		EOR R3,R0,R1
+		ORR R4,R0,R1
+		BIC R5,R0,R1
+		ENDP
+					
+		ALIGN
+		AREA allocations, DATA, READWRITE
+		END
+
